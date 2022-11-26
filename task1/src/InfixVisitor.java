@@ -1,4 +1,4 @@
-// Generated from /home/skollryu/OneDrive/Uni/Year 2/Semester 1/Compilers/Assignment/src/Infix.g4 by ANTLR 4.10.1
+// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**

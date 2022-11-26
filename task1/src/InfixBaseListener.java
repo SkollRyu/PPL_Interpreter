@@ -1,4 +1,4 @@
-// Generated from /home/skollryu/OneDrive/Uni/Year 2/Semester 1/Compilers/Assignment/src/Infix.g4 by ANTLR 4.10.1
+// Generated from java-escape by ANTLR 4.11.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
+@SuppressWarnings("CheckReturnValue")
 public class InfixBaseListener implements InfixListener {
 	/**
 	 * {@inheritDoc}

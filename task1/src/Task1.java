@@ -1,13 +1,12 @@
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class Task1 {
 
     private final Map<String, Types> localVars = new HashMap<>();
     public static void main(String[] args) throws Exception {
@@ -22,7 +21,7 @@ public class Main {
 
         // create a parser that feeds off the tokens buffer
         InfixParser parser = new InfixParser(tokens);
-        ParseTree tree = parser.expr(); // begin parsing at expr rule
+        InfixParser.ProgContext tree = parser.prog(); // begin parsing at expr rule
 
         InfixChecker checker = new InfixChecker();
         try {

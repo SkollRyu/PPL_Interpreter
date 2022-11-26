@@ -16,11 +16,11 @@ public class InfixChecker extends InfixBaseVisitor<Types>
             if (gloFunction.containsKey(ctx.dec(i).Idfr().getText())) {
                 throw new TypeException().duplicatedFuncError();
             }
-            if (ctx.dec(i).Type().getText().equals("Unit")){
+            if (ctx.dec(i).Type().getText().equals("unit")){
                 gloFunction.put(ctx.dec(i).Idfr().getText(), Types.UNIT);
-            } else if (ctx.dec(i).Type().getText().equals("Int")){
+            } else if (ctx.dec(i).Type().getText().equals("int")){
                 gloFunction.put(ctx.dec(i).Idfr().getText(), Types.INT);
-            } else if (ctx.dec(i).Type().getText().equals("Bool")){
+            } else if (ctx.dec(i).Type().getText().equals("bool")){
                 gloFunction.put(ctx.dec(i).Idfr().getText(), Types.BOOL);
             } else {
                 throw new TypeException("Invalid type");
@@ -66,12 +66,12 @@ public class InfixChecker extends InfixBaseVisitor<Types>
             if (localVars.containsKey(ctx.vardec().Idfr(i).getText())) {
                 throw new TypeException().duplicatedVarError();
             }
-            if (ctx.vardec().Type(i).getText().equals("Unit")){
+            if (ctx.vardec().Type(i).getText().equals("unit")){
                 throw new TypeException().unitVarError();
-            } else if (ctx.vardec().Type(i).getText().equals("Int")){
+            } else if (ctx.vardec().Type(i).getText().equals("int")){
                 localVars.put(ctx.vardec().Idfr(i).getText(), Types.INT);
                 functionTypeList.add(Types.INT);
-            } else if (ctx.vardec().Type(i).getText().equals("Bool")){
+            } else if (ctx.vardec().Type(i).getText().equals("bool")){
                 localVars.put(ctx.vardec().Idfr(i).getText(), Types.BOOL);
                 functionTypeList.add(Types.BOOL);
             } else {
@@ -97,12 +97,12 @@ public class InfixChecker extends InfixBaseVisitor<Types>
             if (!localVars.containsKey(ctx.Idfr(i).getText())) {
                 throw new TypeException().undefinedVarError();
             }
-            if (ctx.Type(i).getText().equals("Unit")){
+            if (ctx.Type(i).getText().equals("unit")){
                 // var cannot be unit type
                 throw new TypeException().unitVarError();
-            } else if (ctx.Type(i).getText().equals("Int")){
+            } else if (ctx.Type(i).getText().equals("int")){
                 localVars.put(ctx.Idfr(i).getText(), Types.INT);
-            } else if (ctx.Type(i).getText().equals("Bool")){
+            } else if (ctx.Type(i).getText().equals("bool")){
                 localVars.put(ctx.Idfr(i).getText(), Types.BOOL);
             } else {
                 throw new TypeException("Invalid type");

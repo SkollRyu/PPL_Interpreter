@@ -1,4 +1,4 @@
-// Generated from /home/skollryu/OneDrive/Uni/Year 2/Semester 1/Compilers/Assignment/src/Infix.g4 by ANTLR 4.10.1
+// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class InfixParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.10.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.11.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -79,7 +79,7 @@ public class InfixParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Infix.g4"; }
+	public String getGrammarFileName() { return "java-escape"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -95,6 +95,7 @@ public class InfixParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ProgContext extends ParserRuleContext {
 		public TerminalNode EOF() { return getToken(InfixParser.EOF, 0); }
 		public List<DecContext> dec() {
@@ -158,6 +159,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class DecContext extends ParserRuleContext {
 		public TerminalNode Type() { return getToken(InfixParser.Type, 0); }
 		public TerminalNode Idfr() { return getToken(InfixParser.Idfr, 0); }
@@ -217,6 +219,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class VardecContext extends ParserRuleContext {
 		public List<TerminalNode> Type() { return getTokens(InfixParser.Type); }
 		public TerminalNode Type(int i) {
@@ -295,6 +298,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class BodyContext extends ParserRuleContext {
 		public EneContext ene() {
 			return getRuleContext(EneContext.class,0);
@@ -380,6 +384,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class BlockContext extends ParserRuleContext {
 		public EneContext ene() {
 			return getRuleContext(EneContext.class,0);
@@ -428,6 +433,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class EneContext extends ParserRuleContext {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
@@ -492,6 +498,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -503,6 +510,7 @@ public class InfixParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class CallFunExprContext extends ExprContext {
 		public TerminalNode Idfr() { return getToken(InfixParser.Idfr, 0); }
 		public ArgsContext args() {
@@ -523,6 +531,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class WhileExprContext extends ExprContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -545,6 +554,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class SkipExprContext extends ExprContext {
 		public SkipExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
@@ -561,6 +571,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class BoolExprContext extends ExprContext {
 		public TerminalNode BoolLit() { return getToken(InfixParser.BoolLit, 0); }
 		public BoolExprContext(ExprContext ctx) { copyFrom(ctx); }
@@ -578,6 +589,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IfExprContext extends ExprContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -603,6 +615,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class NewlineExprContext extends ExprContext {
 		public NewlineExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
@@ -619,6 +632,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IdExprContext extends ExprContext {
 		public TerminalNode Idfr() { return getToken(InfixParser.Idfr, 0); }
 		public IdExprContext(ExprContext ctx) { copyFrom(ctx); }
@@ -636,6 +650,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class SpaceExprContext extends ExprContext {
 		public SpaceExprContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
@@ -652,6 +667,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class PrintExprContext extends ExprContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -671,6 +687,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class BlockExprContext extends ExprContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -690,6 +707,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class AssignExprContext extends ExprContext {
 		public TerminalNode Idfr() { return getToken(InfixParser.Idfr, 0); }
 		public ExprContext expr() {
@@ -710,6 +728,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class BinOpExprContext extends ExprContext {
 		public Token op;
 		public List<ExprContext> expr() {
@@ -734,6 +753,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IntExprContext extends ExprContext {
 		public TerminalNode IntLit() { return getToken(InfixParser.IntLit, 0); }
 		public IntExprContext(ExprContext ctx) { copyFrom(ctx); }
@@ -751,6 +771,7 @@ public class InfixParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class ForExprContext extends ExprContext {
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -948,6 +969,7 @@ public class InfixParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ArgsContext extends ParserRuleContext {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
@@ -984,7 +1006,7 @@ public class InfixParser extends Parser {
 			setState(119);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__3) | (1L << T__7) | (1L << T__10) | (1L << T__12) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__17) | (1L << Idfr) | (1L << IntLit) | (1L << BoolLit))) != 0)) {
+			if (((_la) & ~0x3f) == 0 && ((1L << _la) & 15182098L) != 0) {
 				{
 				setState(111);
 				expr();
