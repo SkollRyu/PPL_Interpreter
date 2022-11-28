@@ -5,7 +5,7 @@ grammar Infix;
 
 prog: dec+ EOF ; // RuleIndex: 0
 dec:	Type Idfr '(' vardec ')' body ; // 1
-vardec:	(Type Idfr (',' Type Idfr)*)? ;
+vardec:	(Type Idfr (',' Type Idfr)*)? ; // 2
 body:	'{' (Type Idfr ':=' expr ';')* ene '}';
 // int a = 5, we can assign val for the idfr we have declare in vardec
 block:	'{' ene '}';
