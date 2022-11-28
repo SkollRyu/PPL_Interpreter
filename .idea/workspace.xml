@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="" />
+    <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/Infix.g4" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/Infix.interp" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_build.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2I5SG6HZPgootwAxGhtgKX4YSjW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -13,13 +61,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/skollryu/OneDrive/Uni/Year 2/Semester 1/Compilers/test_build/antlr-4.11.1-complete.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,7 +82,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669469866695</updated>
+      <workItem from="1669481443574" duration="457000" />
+      <workItem from="1669482798512" duration="314000" />
+      <workItem from="1669483498928" duration="378000" />
+      <workItem from="1669484261684" duration="392000" />
+      <workItem from="1669486709205" duration="583000" />
+      <workItem from="1669488193719" duration="372000" />
+      <workItem from="1669490181415" duration="589000" />
+      <workItem from="1669491176841" duration="329000" />
+      <workItem from="1669493053860" duration="1852000" />
+      <workItem from="1669496614515" duration="465000" />
+      <workItem from="1669497612753" duration="393000" />
+      <workItem from="1669499242125" duration="299000" />
+      <workItem from="1669500239201" duration="813000" />
+      <workItem from="1669502872525" duration="1217000" />
+      <workItem from="1669506874042" duration="6621000" />
+      <workItem from="1669569830308" duration="6023000" />
+      <workItem from="1669587957618" duration="366000" />
+      <workItem from="1669594310431" duration="599000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -803,27 +803,27 @@ public class InfixParser extends Parser {
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
 			case 1:
-				_localctx = new IdExprContext(_localctx);
+				_localctx = new BoolExprContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(69);
-				match(Idfr);
+				match(BoolLit);
 				}
 				break;
 			case 2:
-				_localctx = new IntExprContext(_localctx);
+				_localctx = new IdExprContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(70);
-				match(IntLit);
+				match(Idfr);
 				}
 				break;
 			case 3:
-				_localctx = new BoolExprContext(_localctx);
+				_localctx = new IntExprContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(71);
-				match(BoolLit);
+				match(IntLit);
 				}
 				break;
 			case 4:
@@ -1090,8 +1090,8 @@ public class InfixParser extends Parser {
 		"<\t\u0001\u0000\u0000\u0000=B\u0003\f\u0006\u0000>?\u0005\u0006\u0000"+
 		"\u0000?A\u0003\f\u0006\u0000@>\u0001\u0000\u0000\u0000AD\u0001\u0000\u0000"+
 		"\u0000B@\u0001\u0000\u0000\u0000BC\u0001\u0000\u0000\u0000C\u000b\u0001"+
-		"\u0000\u0000\u0000DB\u0001\u0000\u0000\u0000En\u0005\u0015\u0000\u0000"+
-		"Fn\u0005\u0016\u0000\u0000Gn\u0005\u0017\u0000\u0000HI\u0005\u0015\u0000"+
+		"\u0000\u0000\u0000DB\u0001\u0000\u0000\u0000En\u0005\u0017\u0000\u0000"+
+		"Fn\u0005\u0015\u0000\u0000Gn\u0005\u0016\u0000\u0000HI\u0005\u0015\u0000"+
 		"\u0000IJ\u0005\u0005\u0000\u0000Jn\u0003\f\u0006\u0000KL\u0005\u0001\u0000"+
 		"\u0000LM\u0003\f\u0006\u0000MN\u0005\u0013\u0000\u0000NO\u0003\f\u0006"+
 		"\u0000OP\u0005\u0002\u0000\u0000Pn\u0001\u0000\u0000\u0000QR\u0005\u0015"+

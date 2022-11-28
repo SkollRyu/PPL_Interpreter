@@ -67,6 +67,18 @@ public interface InfixListener extends ParseTreeListener {
 	 */
 	void exitEne(InfixParser.EneContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code BoolExpr}
+	 * labeled alternative in {@link InfixParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolExpr(InfixParser.BoolExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code BoolExpr}
+	 * labeled alternative in {@link InfixParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolExpr(InfixParser.BoolExprContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code IdExpr}
 	 * labeled alternative in {@link InfixParser#expr}.
 	 * @param ctx the parse tree
@@ -90,18 +102,6 @@ public interface InfixListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIntExpr(InfixParser.IntExprContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code BoolExpr}
-	 * labeled alternative in {@link InfixParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterBoolExpr(InfixParser.BoolExprContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code BoolExpr}
-	 * labeled alternative in {@link InfixParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitBoolExpr(InfixParser.BoolExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code AssignExpr}
 	 * labeled alternative in {@link InfixParser#expr}.

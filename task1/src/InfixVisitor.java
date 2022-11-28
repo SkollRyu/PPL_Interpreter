@@ -46,6 +46,13 @@ public interface InfixVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEne(InfixParser.EneContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code BoolExpr}
+	 * labeled alternative in {@link InfixParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBoolExpr(InfixParser.BoolExprContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code IdExpr}
 	 * labeled alternative in {@link InfixParser#expr}.
 	 * @param ctx the parse tree
@@ -59,13 +66,6 @@ public interface InfixVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitIntExpr(InfixParser.IntExprContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code BoolExpr}
-	 * labeled alternative in {@link InfixParser#expr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBoolExpr(InfixParser.BoolExprContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code AssignExpr}
 	 * labeled alternative in {@link InfixParser#expr}.

@@ -3,8 +3,8 @@ grammar Infix;
 // if there are multiple possibility, then visit it
 // otherwise check the type
 
-prog: dec+ EOF ;
-dec:	Type Idfr '(' vardec ')' body ;
+prog: dec+ EOF ; // RuleIndex: 0
+dec:	Type Idfr '(' vardec ')' body ; // 1
 vardec:	(Type Idfr (',' Type Idfr)*)? ;
 body:	'{' (Type Idfr ':=' expr ';')* ene '}';
 // int a = 5, we can assign val for the idfr we have declare in vardec
@@ -13,9 +13,9 @@ block:	'{' ene '}';
 ene:	expr (';' expr)*;
 
 expr
-:	Idfr                                # IdExpr
+:   BoolLit                             # BoolExpr
+|	Idfr                                # IdExpr
 |	IntLit                              # IntExpr
-|	BoolLit                             # BoolExpr
 |	Idfr ':=' expr                      # AssignExpr
 //  idfr := IDFR / idfr := BOOL / idfr := INT
 |	'(' expr op=BinOP expr ')'             # BinOpExpr
@@ -37,7 +37,7 @@ args:	(expr (',' expr)*)?;
 BinOP:	'=='  | '<' | '>' | '<='  | '>='
 |	 '+' | '-' | '*' | '/' | '&' | '|' | '^';
 Type:	'int' | 'bool' | 'unit';
+BoolLit:	'true' | 'false';
 Idfr:	[a-z][a-zA-Z0-9_]*;
 IntLit:	'0' | ('-'? [1-9][0-9]*);
-BoolLit:	'true' | 'false';
 WS     : [ \n\r\t]+ -> skip ;
