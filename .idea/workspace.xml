@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/Infix.g4" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/Infix.interp" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task1/src/InfixChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_build.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +23,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="compilers-coursework" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -100,6 +93,17 @@
       <workItem from="1669569830308" duration="6023000" />
       <workItem from="1669587957618" duration="366000" />
       <workItem from="1669594310431" duration="599000" />
+      <workItem from="1669596740871" duration="331000" />
+      <workItem from="1669597545205" duration="178000" />
+      <workItem from="1669597834857" duration="43000" />
+      <workItem from="1669597984594" duration="37000" />
+      <workItem from="1669598096850" duration="62000" />
+      <workItem from="1669598562047" duration="10000" />
+      <workItem from="1669645144814" duration="268000" />
+      <workItem from="1669645687691" duration="266000" />
+      <workItem from="1669646347367" duration="58000" />
+      <workItem from="1669646485361" duration="23000" />
+      <workItem from="1669646579612" duration="1207000" />
     </task>
     <servers />
   </component>

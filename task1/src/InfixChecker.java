@@ -45,6 +45,7 @@ public class InfixChecker extends InfixBaseVisitor<Types>
         // return type should be the type of main method`
         Types mainReturnType = null;
         for (int i = 0; i < ctx.dec().size(); i++) {
+            
             if (ctx.dec(i).Idfr().getText().equals("main")){
                 visit(ctx.dec(i));
                 mainReturnType = visit(ctx.dec(i).body());
@@ -56,6 +57,10 @@ public class InfixChecker extends InfixBaseVisitor<Types>
                     throw new TypeException().functionBodyError();
                 }
             }
+            // <function name, number of args>
+            functionNumArgs.put(ctx.dec(i).Idfr().getText(), ctx.dec(i).vardec().Idfr().size());
+            
+            
         }
         if (mainReturnType == Types.INT){
             return mainReturnType;
@@ -66,6 +71,11 @@ public class InfixChecker extends InfixBaseVisitor<Types>
     @Override public Types visitDec(InfixParser.DecContext ctx) {
         // we define the variable name and type here argsssss
         // make use of local var
+//        if (ctx.vardec().Idfr().size() >= 0){
+//            ctx.getParent().getRuleIndex();
+//            throw new TypeException(Integer.toString(ctx.getParent().getRuleIndex())); //
+//        } this will print 0 - as we go to visitProg which is rule 0
+
         List <Types> functionTypeList = new ArrayList<>();
         Map<String, Types> localVars = new HashMap<>();
         for (int i = 0; i < ctx.vardec().Idfr().size(); i++) {
@@ -115,8 +125,8 @@ public class InfixChecker extends InfixBaseVisitor<Types>
 
         // <function name, type of args>
         fucntionTypeArgs.put(ctx.Idfr().getText(), functionTypeList);
-        // <function name, number of args>
-        functionNumArgs.put(ctx.Idfr().getText(), ctx.vardec().Idfr().size());
+
+        
         return visit(ctx.body());
     }
 
@@ -155,7 +165,10 @@ public class InfixChecker extends InfixBaseVisitor<Types>
             ctxIndex = ctxLevel.getRuleIndex();
         }
 
+
+
         Map <String, Types> localVars = functionVars.get(ctxLevel.getChild(1).getText());
+
         if (!localVars.containsKey(ctx.Idfr().getText())) {
             throw new TypeException().undefinedVarError();
         }
@@ -180,9 +193,9 @@ public class InfixChecker extends InfixBaseVisitor<Types>
         while (ctxIndex != 1){
             ctxLevel = ctxLevel.getParent();
             ctxIndex = ctxLevel.getRuleIndex();
-        }
-        Map <String, Types> localVars = functionVars.get(ctxLevel.getChild(1).getText());
+        } // this part is working
 
+        Map <String, Types> localVars = functionVars.get(ctxLevel.getChild(1).getText());
         if (!localVars.containsKey(ctx.Idfr().getText())) {
             throw new TypeException().undefinedVarError();
             // throw new TypeException("bug2");
@@ -239,11 +252,20 @@ public class InfixChecker extends InfixBaseVisitor<Types>
         if (!gloFunction.containsKey(ctx.Idfr().getText())){
             throw new TypeException().undefinedFuncError();
         }
-        if (functionNumArgs.get(ctx.Idfr().getText()) != ctx.args().expr().size()){
-            throw new TypeException().argumentNumberError();
+
+        try {
+
+            if (functionNumArgs.get(ctx.Idfr().getText()) != ctx.args().expr().size()) {
+                throw new TypeException().argumentNumberError();
+            }
+        }
+        catch (java.lang.NullPointerException e){
+            throw new TypeException(ctx.Idfr().getText());
+            // the problem is the idfr is not in the hashmap
         }
 
         for (int i = 0; i < ctx.args().expr().size(); i++) {
+
             // if each arg expr match with the functions arg types
             if (visit(ctx.args().expr(i)) != fucntionTypeArgs.get(ctx.Idfr().getText()).get(i)){
                 throw new TypeException().argumentError();
