@@ -321,7 +321,6 @@ public class InfixChecker extends InfixBaseVisitor<Types>
 
     @Override public Types visitIfExpr(InfixParser.IfExprContext ctx) {
         if (visit(ctx.expr()) != Types.BOOL) {
-            System.out.println(visit(ctx.expr()));
             throw new TypeException().conditionError();
         }
         if (visit(ctx.block(0)) != visit(ctx.block(1))){
@@ -331,7 +330,7 @@ public class InfixChecker extends InfixBaseVisitor<Types>
     }
 
     @Override public Types visitWhileExpr(InfixParser.WhileExprContext ctx) {
-
+        
         if (visit(ctx.expr()) != Types.BOOL) {
             throw new TypeException().conditionError();
         }
