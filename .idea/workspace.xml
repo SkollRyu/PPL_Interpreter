@@ -5,36 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RARSInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task2/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task2/src/InfixCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task2/src/Task2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixInterpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixInterpreter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$AssignExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$AssignExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$BodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$BodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$BoolExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$BoolExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$CallFunExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$CallFunExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$DecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$DecContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$IdExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$IdExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$IntExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$IntExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$VardecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser$VardecContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/Task1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/Infix.interp" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/Infix.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Infix.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixInterpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/InfixParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1/src/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Task1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/InfixChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/InfixInterpreter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/Task1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/TypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/Types.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +58,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2I5SG6HZPgootwAxGhtgKX4YSjW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -95,6 +79,17 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/task2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Task1" />
@@ -168,6 +163,9 @@
       <workItem from="1669925419758" duration="399000" />
       <workItem from="1669928281009" duration="443000" />
       <workItem from="1669945465338" duration="1050000" />
+      <workItem from="1669968980918" duration="1442000" />
+      <workItem from="1670020795628" duration="7865000" />
+      <workItem from="1670033183399" duration="8849000" />
     </task>
     <servers />
   </component>
@@ -184,5 +182,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
