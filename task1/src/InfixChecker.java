@@ -1,18 +1,26 @@
 // TODO
 
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
+
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InfixChecker extends InfixBaseVisitor<Types>
+public class InfixChecker extends AbstractParseTreeVisitor<Types> implements InfixVisitor<Types>
 {
     private final Map<String, Types> gloFunction = new HashMap<>();
     private final Map<String, Integer> functionNumArgs = new HashMap<>();
     private final Map<String, List<Types>> fucntionTypeArgs = new HashMap<>();
-    private final Map<String, Types> localVars = new HashMap<>();
+    private final Map<String, Map<String, Types>> functionVars = new HashMap<>();
+    // map of a map <function, localvars>
     @Override public Types visitProg(InfixParser.ProgContext ctx) {
+
+
         for (int i = 0; i < ctx.dec().size(); ++i) {
+            // put <function, return type> into gloFunction
             if (gloFunction.containsKey(ctx.dec(i).Idfr().getText())) {
                 throw new TypeException().duplicatedFuncError();
             }
@@ -22,16 +30,11 @@ public class InfixChecker extends InfixBaseVisitor<Types>
                 gloFunction.put(ctx.dec(i).Idfr().getText(), Types.INT);
             } else if (ctx.dec(i).Type().getText().equals("bool")){
                 gloFunction.put(ctx.dec(i).Idfr().getText(), Types.BOOL);
-            } else {
-                throw new TypeException("Invalid type");
             }
+//            else {
+//                throw new TypeException("Invalid type");
+//            }
         }
-
-        gloFunction.forEach(
-                (key, value)
-                        -> System.out.println(key + " = " + value));
-
-
 
         if (!gloFunction.containsKey("main")){
             throw new TypeException().noMainFuncError();
@@ -41,47 +44,133 @@ public class InfixChecker extends InfixBaseVisitor<Types>
             throw new TypeException().mainReturnTypeError();
         }
 
-
         // return type should be the type of main method`
-        Types returnType = null; // need to visit all dec to check inside - todo
+        Types mainReturnType = null;
+        for (int i = 0; i < ctx.dec().size(); i++) {
+            
+
+            // <function name, number of args>
+            functionNumArgs.put(ctx.dec(i).Idfr().getText(), ctx.dec(i).vardec().Idfr().size());
+
+            // list and map are for each functions
+            List <Types> functionTypeList = new ArrayList<>();
+            Map<String, Types> localVars = new HashMap<>();
+            for (int j = 0; j < ctx.dec(i).vardec().Idfr().size(); j++) {
+                // variable checking and init
+                if (localVars.containsKey(ctx.dec(i).vardec().Idfr(j).getText())) {
+                    throw new TypeException().duplicatedVarError();
+                }
+                if (gloFunction.containsKey(ctx.dec(i).vardec().Idfr(j).getText())) {
+                    throw new TypeException().clashedVarError();
+                }
+                if (ctx.dec(i).vardec().Type(j).getText().equals("unit")){
+                    throw new TypeException().unitVarError();
+                }
+                if (ctx.dec(i).vardec().Type(j).getText().equals("int")){
+                    localVars.put(ctx.dec(i).vardec().Idfr(j).getText(), Types.INT);
+                    functionTypeList.add(Types.INT);
+                }
+                if (ctx.dec(i).vardec().Type(j).getText().equals("bool")){
+                    localVars.put(ctx.dec(i).vardec().Idfr(j).getText(), Types.BOOL);
+                    functionTypeList.add(Types.BOOL);
+                }
+//            else {
+//                throw new TypeException("Invalid type");
+//            }
+            }
+            fucntionTypeArgs.put(ctx.dec(i).Idfr().getText(), functionTypeList);
+            functionVars.put(ctx.dec(i).Idfr().getText(), localVars);
+
+        }
+
+
         for (int i = 0; i < ctx.dec().size(); i++) {
             if (ctx.dec(i).Idfr().getText().equals("main")){
-                returnType = visit(ctx.dec(i).body());
+                visit(ctx.dec(i));
+                mainReturnType = visit(ctx.dec(i).body());
             } else {
-                visit(ctx.dec(i).body());
+                visit(ctx.dec(i));
+                Types functionReturnType = visit(ctx.dec(i).body());
+                // todo - need to check why not print this one
+                if (functionReturnType != gloFunction.get(ctx.dec(i).Idfr().getText())){
+                    throw new TypeException().functionBodyError();
+                }
             }
         }
-        if (returnType == Types.INT){
-            return returnType;
+        
+        if (mainReturnType == Types.INT){
+            return mainReturnType;
         } else {
-            throw new TypeException().mainReturnTypeError();
+            throw new TypeException().functionBodyError();
         }
     }
     @Override public Types visitDec(InfixParser.DecContext ctx) {
         // we define the variable name and type here argsssss
         // make use of local var
-        List <Types> functionTypeList = new ArrayList<>();
-        for (int i = 0; i < ctx.vardec().Idfr().size(); i++) {
-            // variable checking and init
-            if (localVars.containsKey(ctx.vardec().Idfr(i).getText())) {
+//        if (ctx.vardec().Idfr().size() >= 0){
+//            ctx.getParent().getRuleIndex();
+//            throw new TypeException(Integer.toString(ctx.getParent().getRuleIndex())); //
+//        } this will print 0 - as we go to visitProg which is rule 0
+
+//        List <Types> functionTypeList = new ArrayList<>();
+        Map<String, Types> localVars = functionVars.get(ctx.Idfr().getText());
+//        for (int i = 0; i < ctx.vardec().Idfr().size(); i++) {
+//            // variable checking and init
+//            if (localVars.containsKey(ctx.vardec().Idfr(i).getText())) {
+//                throw new TypeException().duplicatedVarError();
+//            }
+//            if (gloFunction.containsKey(ctx.vardec().Idfr(i).getText())) {
+//                throw new TypeException().clashedVarError();
+//            }
+//            if (ctx.vardec().Type(i).getText().equals("unit")){
+//                throw new TypeException().unitVarError();
+//            }
+//            if (ctx.vardec().Type(i).getText().equals("int")){
+//                localVars.put(ctx.vardec().Idfr(i).getText(), Types.INT);
+//                functionTypeList.add(Types.INT);
+//            }
+//            if (ctx.vardec().Type(i).getText().equals("bool")){
+//                localVars.put(ctx.vardec().Idfr(i).getText(), Types.BOOL);
+//                functionTypeList.add(Types.BOOL);
+//            }
+////            else {
+////                throw new TypeException("Invalid type");
+////            }
+//        }
+
+        for (int i = 0; i < ctx.body().Idfr().size(); i++) {
+            // This is where they can init variable
+            if (gloFunction.containsKey(ctx.body().Idfr(i).getText())) {
+                throw new TypeException().clashedVarError();
+            }
+
+            if (localVars.containsKey(ctx.body().Idfr(i).getText())) {
                 throw new TypeException().duplicatedVarError();
             }
-            if (ctx.vardec().Type(i).getText().equals("unit")){
+
+            if (ctx.body().Type(i).getText().equals("unit")){
+                // var cannot be unit type
                 throw new TypeException().unitVarError();
-            } else if (ctx.vardec().Type(i).getText().equals("int")){
-                localVars.put(ctx.vardec().Idfr(i).getText(), Types.INT);
-                functionTypeList.add(Types.INT);
-            } else if (ctx.vardec().Type(i).getText().equals("bool")){
-                localVars.put(ctx.vardec().Idfr(i).getText(), Types.BOOL);
-                functionTypeList.add(Types.BOOL);
-            } else {
-                throw new TypeException("Invalid type");
+            } else if (ctx.body().Type(i).getText().equals("int")){
+                if (visit(ctx.body().expr(i)) != Types.INT){
+                    throw new TypeException().assignmentError();
+                }
+                localVars.put(ctx.body().Idfr(i).getText(), Types.INT);
+            } else if (ctx.body().Type(i).getText().equals("bool")){
+                if (visit(ctx.body().expr(i)) != Types.BOOL){
+                    throw new TypeException().assignmentError();
+                }
+                localVars.put(ctx.body().Idfr(i).getText(), Types.BOOL);
             }
+//            else {
+//                throw new TypeException("Invalid type");
+//            }
         }
-        // <function name, type of args>
-        fucntionTypeArgs.put(ctx.Idfr().getText(), functionTypeList);
-        // <function name, number of args>
-        functionNumArgs.put(ctx.Idfr().getText(), ctx.vardec().Idfr().size());
+
+        functionVars.put(ctx.Idfr().getText(), localVars);
+        
+
+        
         return visit(ctx.body());
     }
 
@@ -91,47 +180,45 @@ public class InfixChecker extends InfixBaseVisitor<Types>
     }
 
     @Override public Types visitBody(InfixParser.BodyContext ctx) {
-        // todo - check if assignment type is same as the expr
-        for (int i = 0; i < ctx.Idfr().size(); i++) {
-            // variable checking and init
-            if (!localVars.containsKey(ctx.Idfr(i).getText())) {
-                throw new TypeException().undefinedVarError();
-            }
-            if (ctx.Type(i).getText().equals("unit")){
-                // var cannot be unit type
-                throw new TypeException().unitVarError();
-            } else if (ctx.Type(i).getText().equals("int")){
-                localVars.put(ctx.Idfr(i).getText(), Types.INT);
-            } else if (ctx.Type(i).getText().equals("bool")){
-                localVars.put(ctx.Idfr(i).getText(), Types.BOOL);
-            } else {
-                throw new TypeException("Invalid type");
-            }
-        }
-        return null;
+        return visit(ctx.ene());
     }
 
     @Override public Types visitBlock(InfixParser.BlockContext ctx) {
         // the block expr should be at expr > block
         return visit(ctx.ene());
-        // return Types.UNIT;
     }
 
     @Override public Types visitEne(InfixParser.EneContext ctx) {
-        // todo - need to double check - return the type of last expr
         Types lastExprType = null;
         for (int i = 0; i < ctx.expr().size(); i++) {
             lastExprType = visit(ctx.expr(i));
-            // visit(ctx.expr().get(i);
         }
         return lastExprType;
     }
 
     @Override public Types visitIdExpr(InfixParser.IdExprContext ctx) {
-        if (!gloFunction.containsKey(ctx.Idfr().getText())) {
+        if (ctx.Idfr().getText().equals("true") || ctx.Idfr().getText().equals("false")){
+            return Types.BOOL;
+        }
+
+        // todo
+        ParserRuleContext ctxLevel = ctx.getParent();
+        int ctxIndex = ctxLevel.getRuleIndex();
+        while (ctxIndex != 1){
+            ctxLevel = ctxLevel.getParent();
+            ctxIndex = ctxLevel.getRuleIndex();
+        }
+
+
+
+        Map <String, Types> localVars = functionVars.get(ctxLevel.getChild(1).getText());
+
+
+        if (!localVars.containsKey(ctx.Idfr().getText())) {
+            //throw new TypeException("bug1");
             throw new TypeException().undefinedVarError();
         }
-        return gloFunction.get(ctx.getText()); // either bool / unit or int
+        return localVars.get(ctx.Idfr().getText()); // either bool / unit or int
     }
 
     @Override public Types visitIntExpr(InfixParser.IntExprContext ctx) {
@@ -145,14 +232,25 @@ public class InfixChecker extends InfixBaseVisitor<Types>
 
     @Override public Types visitAssignExpr(InfixParser.AssignExprContext ctx) {
         // IDFR need to be same type as EXPR
+
+        // todo
+        ParserRuleContext ctxLevel = ctx.getParent();
+        int ctxIndex = ctxLevel.getRuleIndex();
+        while (ctxIndex != 1){
+            ctxLevel = ctxLevel.getParent();
+            ctxIndex = ctxLevel.getRuleIndex();
+        } // this part is working
+
+        Map <String, Types> localVars = functionVars.get(ctxLevel.getChild(1).getText());
         if (!localVars.containsKey(ctx.Idfr().getText())) {
             throw new TypeException().undefinedVarError();
+             // throw new TypeException("bug2");
         }
         // like if we assign a bool to int -> throw exception
         if (visit(ctx.expr()) != localVars.get(ctx.Idfr().getText())) {
             throw new TypeException().assignmentError();
         }
-        return null;
+        return Types.UNIT;
     }
 
     @Override public Types visitBinOpExpr(InfixParser.BinOpExprContext ctx) {
@@ -196,42 +294,55 @@ public class InfixChecker extends InfixBaseVisitor<Types>
     }
 
     @Override public Types visitCallFunExpr(InfixParser.CallFunExprContext ctx) {
+
         if (!gloFunction.containsKey(ctx.Idfr().getText())){
             throw new TypeException().undefinedFuncError();
         }
-        if (functionNumArgs.get(ctx.Idfr().getText()) != ctx.args().expr().size()){
+
+//        try {
+//
+//            if (functionNumArgs.get(ctx.Idfr().getText()) != ctx.args().expr().size()) {
+//                throw new TypeException().argumentNumberError();
+//            }
+//        }
+//        catch (java.lang.NullPointerException e){
+//            throw new TypeException(ctx.Idfr().getText());
+//            // the problem is the idfr is not in the hashmap
+//        }
+
+        if (functionNumArgs.get(ctx.Idfr().getText()) != ctx.args().expr().size()) {
             throw new TypeException().argumentNumberError();
         }
 
         for (int i = 0; i < ctx.args().expr().size(); i++) {
+
             // if each arg expr match with the functions arg types
             if (visit(ctx.args().expr(i)) != fucntionTypeArgs.get(ctx.Idfr().getText()).get(i)){
                 throw new TypeException().argumentError();
             }
         }
-        return visit(ctx.args());
+        return gloFunction.get(ctx.Idfr().getText());
     }
 
     @Override public Types visitBlockExpr(InfixParser.BlockExprContext ctx) {
-        // todo - double check
-        // todo - shall we return the last type of the expr in block?
-        visit(ctx.block());
+        if (ctx.getParent().getRuleIndex() == 6){
+            return visit(ctx.block());
+        }
         return Types.UNIT;
     }
 
     @Override public Types visitIfExpr(InfixParser.IfExprContext ctx) {
-        // todo
         if (visit(ctx.expr()) != Types.BOOL) {
             throw new TypeException().conditionError();
         }
         if (visit(ctx.block(0)) != visit(ctx.block(1))){
             throw new TypeException().branchMismatchError();
         }
-        return Types.UNIT;
+        return visit(ctx.block(0)); // return the type of if else statement
     }
 
     @Override public Types visitWhileExpr(InfixParser.WhileExprContext ctx) {
-        // todo
+        
         if (visit(ctx.expr()) != Types.BOOL) {
             throw new TypeException().conditionError();
         }
@@ -242,11 +353,13 @@ public class InfixChecker extends InfixBaseVisitor<Types>
     }
 
     @Override public Types visitForExpr(InfixParser.ForExprContext ctx) {
-        if (visit(ctx.expr()) == Types.BOOL & visit(ctx.block()) == Types.UNIT){
-            return Types.UNIT;
-        } else {
+        if (visit(ctx.expr()) != Types.BOOL) {
+            throw new TypeException().conditionError();
+        }
+        if (visit(ctx.block()) != Types.UNIT){
             throw new TypeException().loopBodyError();
         }
+        return Types.UNIT;
     }
 
     @Override public Types visitPrintExpr(InfixParser.PrintExprContext ctx){
@@ -256,6 +369,7 @@ public class InfixChecker extends InfixBaseVisitor<Types>
         } else {
             throw new TypeException().printError();
         }
+
     }
 
     @Override public Types visitSpaceExpr(InfixParser.SpaceExprContext ctx){

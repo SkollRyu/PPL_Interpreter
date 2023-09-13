@@ -1,25 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="" />
+    <list default="true" id="92780179-7723-4f59-bea7-55a4e269ba95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixChecker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/InfixInterpreter.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/InfixInterpreter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/classes/java/main/Task1.class" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/classes/java/main/Task1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/task1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/InfixInterpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/InfixInterpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1/src/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/task1/src/Task1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/InfixCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/InfixCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/src/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/task2/src/Task2.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="compilers-coursework" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2I5SG6HZPgootwAxGhtgKX4YSjW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/skollryu/OneDrive/Uni/Year 2/Semester 1/Compilers/coach/compiler_268022&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/task2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.test_build [run]">
+    <configuration name="Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Task1" />
+      <module name="compilers-coursework.task1.main" />
+      <option name="PROGRAM_PARAMETERS" value="5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Task2" />
+      <module name="compilers-coursework.task2.main" />
+      <option name="PROGRAM_PARAMETERS" value="0 0 1" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <method v="2" />
+    </configuration>
+    <configuration name="test_build [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Task2" />
+      <item itemvalue="Application.Task1" />
+      <item itemvalue="Gradle.test_build [run]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.test_build [run]" />
+        <item itemvalue="Application.Task1" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,7 +155,96 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669469866695</updated>
+      <workItem from="1669481443574" duration="457000" />
+      <workItem from="1669482798512" duration="314000" />
+      <workItem from="1669483498928" duration="378000" />
+      <workItem from="1669484261684" duration="392000" />
+      <workItem from="1669486709205" duration="583000" />
+      <workItem from="1669488193719" duration="372000" />
+      <workItem from="1669490181415" duration="589000" />
+      <workItem from="1669491176841" duration="329000" />
+      <workItem from="1669493053860" duration="1852000" />
+      <workItem from="1669496614515" duration="465000" />
+      <workItem from="1669497612753" duration="393000" />
+      <workItem from="1669499242125" duration="299000" />
+      <workItem from="1669500239201" duration="813000" />
+      <workItem from="1669502872525" duration="1217000" />
+      <workItem from="1669506874042" duration="6621000" />
+      <workItem from="1669569830308" duration="6023000" />
+      <workItem from="1669587957618" duration="366000" />
+      <workItem from="1669594310431" duration="599000" />
+      <workItem from="1669596740871" duration="331000" />
+      <workItem from="1669597545205" duration="178000" />
+      <workItem from="1669597834857" duration="43000" />
+      <workItem from="1669597984594" duration="37000" />
+      <workItem from="1669598096850" duration="62000" />
+      <workItem from="1669598562047" duration="10000" />
+      <workItem from="1669645144814" duration="268000" />
+      <workItem from="1669645687691" duration="266000" />
+      <workItem from="1669646347367" duration="58000" />
+      <workItem from="1669646485361" duration="23000" />
+      <workItem from="1669646579612" duration="1602000" />
+      <workItem from="1669649472998" duration="183000" />
+      <workItem from="1669649729210" duration="363000" />
+      <workItem from="1669650328966" duration="200000" />
+      <workItem from="1669650843416" duration="1268000" />
+      <workItem from="1669652891056" duration="1334000" />
+      <workItem from="1669662716406" duration="48000" />
+      <workItem from="1669662794631" duration="3056000" />
+      <workItem from="1669669128525" duration="423000" />
+      <workItem from="1669722980610" duration="891000" />
+      <workItem from="1669725260990" duration="73000" />
+      <workItem from="1669728883203" duration="7083000" />
+      <workItem from="1669740813790" duration="17659000" />
+      <workItem from="1669807513390" duration="15719000" />
+      <workItem from="1669841265761" duration="6920000" />
+      <workItem from="1669851313536" duration="308000" />
+      <workItem from="1669852998851" duration="529000" />
+      <workItem from="1669922077390" duration="681000" />
+      <workItem from="1669923146778" duration="803000" />
+      <workItem from="1669925419758" duration="399000" />
+      <workItem from="1669928281009" duration="443000" />
+      <workItem from="1669945465338" duration="1050000" />
+      <workItem from="1669968980918" duration="1442000" />
+      <workItem from="1670020795628" duration="7865000" />
+      <workItem from="1670033183399" duration="8849000" />
+      <workItem from="1670073681814" duration="17000" />
+      <workItem from="1670075372910" duration="1553000" />
+      <workItem from="1670084670216" duration="614000" />
+      <workItem from="1670086562790" duration="2183000" />
+      <workItem from="1670094445575" duration="2822000" />
+      <workItem from="1670196355223" duration="274000" />
+      <workItem from="1670196644859" duration="925000" />
+      <workItem from="1670199717487" duration="157000" />
+      <workItem from="1670200306877" duration="6624000" />
+      <workItem from="1670214627178" duration="463000" />
+      <workItem from="1670215201444" duration="365000" />
+      <workItem from="1670216163549" duration="564000" />
+      <workItem from="1670227996084" duration="5995000" />
+      <workItem from="1670258931696" duration="1413000" />
+      <workItem from="1670262391717" duration="607000" />
+      <workItem from="1670264147467" duration="1582000" />
+      <workItem from="1670270916215" duration="1979000" />
+      <workItem from="1670273832727" duration="56000" />
+      <workItem from="1670275430850" duration="622000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

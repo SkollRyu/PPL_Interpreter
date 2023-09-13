@@ -1,14 +1,11 @@
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.tree.ParseTree;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class Task1 {
 
-    private final Map<String, Types> localVars = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
         // create a CharStream that reads from standard input
         CharStream input = CharStreams.fromStream(System.in);
@@ -30,6 +27,11 @@ public class Task1 {
             System.out.println(ex.report());
             return;
         }
+
+        InfixInterpreter interpreter = new InfixInterpreter();
+        Integer mainReturnvalue = interpreter.visitProgram(tree, args);
+        System.out.println();
         System.out.println("NORMAL_TERMINATION");
+        System.out.println(mainReturnvalue);
     }
 }
