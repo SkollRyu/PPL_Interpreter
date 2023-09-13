@@ -132,7 +132,7 @@ public class Task2 {
                     .macro    LogicalOr
                         Popt1t2
                         or          t1, t1, t2
-                        sw          t1, (sp)
+                        sw          t1, what(sp)
                         addi        sp, sp, -4
                     .end_macro
                     
@@ -165,6 +165,6 @@ public class Task2 {
                     """;
 
         InfixCodeGenerator codegen = new InfixCodeGenerator();
-        System.out.println(stackMachineMacros + codegen.visit(tree));
+        System.out.println(stackMachineMacros + codegen.visitProgram(tree));
     }
 }

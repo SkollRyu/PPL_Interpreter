@@ -1,13 +1,15 @@
 // TODO
 
 import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InfixChecker extends InfixBaseVisitor<Types>
+public class InfixChecker extends AbstractParseTreeVisitor<Types> implements InfixVisitor<Types>
 {
     private final Map<String, Types> gloFunction = new HashMap<>();
     private final Map<String, Integer> functionNumArgs = new HashMap<>();

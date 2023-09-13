@@ -15,8 +15,7 @@ public class InfixCodeGenerator extends AbstractParseTreeVisitor<String> impleme
     private int labelCounter = 0;
     private final Map<String, InfixParser.DecContext> decContextMap= new HashMap<>();
 
-    @Override
-    public String visitProg(InfixParser.ProgContext ctx) {
+    public String visitProgram(InfixParser.ProgContext ctx){
         InfixParser.DecContext mainDec = null;
         for (int i = 0; i < ctx.dec().size(); i++) {
             decContextMap.put(ctx.dec(i).Idfr().getText(), ctx.dec(i));
@@ -28,6 +27,10 @@ public class InfixCodeGenerator extends AbstractParseTreeVisitor<String> impleme
         }
         assert mainDec != null;
         return visit(mainDec.body());
+    }
+    @Override
+    public String visitProg(InfixParser.ProgContext ctx) {
+        return null;
     }
 
     @Override
@@ -219,64 +222,77 @@ public class InfixCodeGenerator extends AbstractParseTreeVisitor<String> impleme
                     Plus
                 """
                 );
+                break;
             case "-":
                 sb.append("""
                     Minus
                 """
                 );
+                break;
             case "*":
                 sb.append("""
                     Times
                 """
                 );
+                break;
             case "/":
                 sb.append("""
                     Divide
                 """
                 );
+                break;
             case "==":
                 sb.append("""
                     CompEQ
                 """
                 );
+                break;
             case "<":
                 sb.append("""
                     CompLT
                 """
                 );
+                break;
             case ">":
                 sb.append("""
                     CompGT
                 """
                 );
+                break;
             case "<=":
                 sb.append("""
                     CompLE
                 """
                 );
+                break;
             case ">=":
                 sb.append("""
                     CompGE
                 """
                 );
+                break;
             case "^":
                 sb.append("""
                     LogicalXor
                 """
                 );
+                break;
             case "&":
                 sb.append("""
                     LogicalAnd
                 """
                 );
+                break;
             case "|":
                 sb.append("""
                     LogicalOr
                 """
                 );
+                break;
             default:
                 throw new RuntimeException("Shouldn't be here - wrong binary operator.");
         }
+        return sb.toString();
     }
 
     @Override

@@ -233,8 +233,8 @@ public class InfixInterpreter extends AbstractParseTreeVisitor<Integer> implemen
             localVars.put(currDec.body().Idfr(i).getText(), visit(currDec.body().expr(i)));
         }
 
-
-        functionVars.put(currDec.getText(), localVars);
+        // todo
+        functionVars.put(currDec.Idfr().getText(), localVars);
         int returnValue = -1;
         if (currDec.Type().getText().equals("unit")){
             visit(currDec.body().ene());
