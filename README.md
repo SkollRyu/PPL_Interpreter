@@ -1,5 +1,11 @@
 # PPL_Interpreter 
 
+## Description
+In our simple programming language, the main function is a function int main(...), which may occur anywhere in the function declarations. The return value of a function is the value of the final expression in its body. All arguments to functions are passed by value, and the only identifiers defined in any function are as follows:
+
+- The names of other functions (which may be defined before or after the current function in the source file);
+- The parameters taken by the current function;
+- The local variables (defined at the top of the current function's body). 
 
 ## Syntax Description
 ### The grammar
